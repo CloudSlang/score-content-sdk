@@ -8,7 +8,20 @@
 		<url>https://github.com/HPSoftware/score-sdk.git</url>
 		<tag>master</tag>
 	</scm>
-	
+    
+    <distributionManagement>
+        <repository>
+            <id>nexus-repository</id>
+            <name>nexus repository</name>
+            <url>http://mydphdb0166.hpswlabs.adapps.hp.com:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshot-repository</id>
+            <name>nexus snapshots repository</name>
+            <url>http://mydphdb0166.hpswlabs.adapps.hp.com:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
     <!--todo check if we want to change the group id-->
     <groupId>com.hp.oo.sdk</groupId>
     <artifactId>score-sdk</artifactId>
