@@ -18,6 +18,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * - text: the text that each response transition will show.
  * - field + value: will be used for the response's rule. The created rule will be in the format of 'field Matches value'.
  */
+//TODO: Add more Javadoc
 @Target({}) @Retention(RUNTIME)
 public @interface Response {
     String text();

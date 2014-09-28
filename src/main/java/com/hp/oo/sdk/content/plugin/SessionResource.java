@@ -5,6 +5,7 @@ package com.hp.oo.sdk.content.plugin;
  *
  * @author Dima Rassin
  */
+//TODO: Add Javadoc
 public abstract class SessionResource<T> {
     public abstract T get();
 

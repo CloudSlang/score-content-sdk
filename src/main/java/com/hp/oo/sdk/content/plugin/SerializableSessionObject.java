@@ -8,6 +8,7 @@ import java.io.Serializable;
  * Date: 3/19/12
  * Time: 8:14 PM
  */
+//TODO: Add Javadoc
 public class SerializableSessionObject extends SessionParam{
     private static final long serialVersionUID = -8017906075213304430L;
 

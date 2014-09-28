@@ -5,6 +5,7 @@ package com.hp.oo.sdk.content.plugin;
  *
  * @author Meir Wahnon
  */
+//TODO: Add Javadoc
 public class GlobalSessionObject<T> extends SessionParam {
     private static final long serialVersionUID = 3164809302900911841L;
 
