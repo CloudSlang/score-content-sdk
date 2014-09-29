@@ -22,9 +22,8 @@
         </snapshotRepository>
     </distributionManagement>
     
-    <!--todo check if we want to change the group id-->
-    <groupId>com.hp.oo.sdk</groupId>
-    <artifactId>score-sdk</artifactId>
+    <groupId>com.hp.score.sdk</groupId>
+    <artifactId>score-content-sdk</artifactId>
     <version>1.3-SNAPSHOT</version>
 
 </project>
