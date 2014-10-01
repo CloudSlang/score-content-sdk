@@ -26,15 +26,16 @@
     <artifactId>score-content-sdk</artifactId>
     <version>1.5-SNAPSHOT</version>
     
+    <properties>
+      <gpg.skip>true</gpg.skip>
+    </properties>
+    
     <build>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
           <version>1.5</version>
-          <configuration>
-            <skip>true</skip>
-          </configuration>
           <executions>
             <execution>
               <id>sign-artifacts</id>
