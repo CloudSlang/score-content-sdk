@@ -21,7 +21,7 @@
     -->
     <groupId>com.hp.score.sdk</groupId>
     <artifactId>score-content-sdk</artifactId>
-    <version>10.20.3.1-SNAPSHOT</version>
+    <version>10.20.3.1</version>
     <packaging>jar</packaging>
     <name>com.hp.score.sdk:score-content-sdk</name>
     <description>An SDK to develop score content</description>
