@@ -36,9 +36,9 @@
       </developer>
     </developers>
     <scm>
-        <connection>scm:git:https://openscore/score-sdk.git</connection>
-        <developerConnection>scm:git:git@github.com:openscore/score-sdk.git</developerConnection>
-        <url>https://github.com/openscore/score-sdk.git</url>
+        <connection>scm:git:https://openscore/score-content-sdk.git</connection>
+        <developerConnection>scm:git:git@github.com:openscore/score-content-sdk.git</developerConnection>
+        <url>https://github.com/openscore/score-content-sdk.git</url>
         <tag>master</tag>
     </scm>
     <distributionManagement>
