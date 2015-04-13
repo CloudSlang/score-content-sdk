@@ -1,2 +1,2 @@
-cloud-slang-sdk
+score-content-sdk
 =========
