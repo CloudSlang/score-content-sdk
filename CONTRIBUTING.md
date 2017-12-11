@@ -77,7 +77,7 @@ To make a pull request you will need a GitHub account. For help, see GitHub's do
 Normally, all pull requests must include tests that test your change. Occasionally, a change will be very difficult to test. In those cases, please include a note in your commit message explaining why tests are not included.
 
 
-##Conduct
+## Conduct
 
 Whether you are a regular contributor or a newcomer, we care about making this community a safe place for you.
 
