@@ -20,6 +20,7 @@ import java.io.Serializable;
 public class ObjectSessionResource extends SessionResource<Object> implements Serializable {
 
     private static final long serialVersionUID = -1056068984564693902L;
+
     private Object object;
 
     public ObjectSessionResource(final Object object) {
