@@ -144,10 +144,7 @@
                 <artifactId>license-maven-plugin</artifactId>
                 <version>3.0</version>
                 <configuration>
-                    <header>${project.basedir}/license.template</header>
-                    <headerDefinitions>
-                        <headerDefinition>${project.basedir}/header-definitions.xml</headerDefinition>
-                    </headerDefinitions>
+                    <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
                     <includes>
                         <include>**/*.java</include>
                         <include>pom.xml</include>
@@ -156,6 +153,7 @@
                     <properties>
                         <owner>Open Text</owner>
                         <year>2022-2026</year>
+                        <project.inceptionYear>2022-2026</project.inceptionYear>
                         <email>L.P.</email>
                     </properties>
                     <mapping>
