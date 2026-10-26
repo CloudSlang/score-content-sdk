@@ -5,7 +5,7 @@ Score Content SDK
 | ----- | -----|
 | [![Build Status](https://travis-ci.org/CloudSlang/score-content-sdk.svg?branch=master)](https://travis-ci.org/CloudSlang/score-content-sdk) | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.hp.score.sdk/score-content-sdk/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.hp.score.sdk/score-content-sdk) |
 
-###### Pre-Requisite: Java JRE >= 7
+###### Pre-Requisite: Java JDK >= 17
 
 ### Dependency Information
 
