@@ -13,27 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin;
 
-import java.io.Serializable;
+/**
+ * Date: 2/20/14
+ *
+ * @author Meir Wahnon
+ */
+//TODO: Add Javadoc
+public class GlobalSessionObject<T> extends SessionParam {
+    private static final long serialVersionUID = 3164809302900911841L;
 
-public class ObjectSessionResource extends SessionResource<Object> implements Serializable {
+    private SessionResource<T> resource;
 
-    private static final long serialVersionUID = -1056068984564693902L;
-
-    private Object object;
-
-    public ObjectSessionResource(final Object object) {
-        this.object = object;
+    public void setResource(SessionResource<T> resource) {
+        this.resource = resource;
     }
 
-    @Override
-    public Object get() {
-        return object;
+    public SessionResource<T> getResource() {
+        return resource;
     }
 
-    @Override
-    public void release() {
-        object = null;
+    public T get() {
+        return resource == null ? null : resource.get();
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin.ActionMetadata;
+package io.cloudslang.content.plugin.ActionMetadata;
 
 /**
  * This enum is used in Studio the create operations from the @Action/IActions

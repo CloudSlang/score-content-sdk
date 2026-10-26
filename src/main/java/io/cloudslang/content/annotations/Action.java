@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
+package io.cloudslang.content.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

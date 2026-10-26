@@ -13,27 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin;
 
 import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
  * User: maromben
- * Date: 3/19/12
- * Time: 8:14 PM
+ * Date: 3/25/12
+ * Time: 12:44 PM
  */
 //TODO: Add Javadoc
-public class SerializableSessionObject extends SessionParam{
-    private static final long serialVersionUID = -8017906075213304430L;
+public abstract class SessionParam  implements Serializable {
+    private static final long serialVersionUID = 2998161362775739998L;
 
-    private Serializable value;
+    private String name;
 
-    public Serializable getValue() {
-        return value;
+    public String getName() {
+        return name;
     }
 
-    public void setValue(Serializable value) {
-        this.value = value;
+    public void setName(String name) {
+        if (this.name != null){
+            throw new UnsupportedOperationException("Name can't be changed more than once!");
+        }
+        this.name = name;
     }
 }

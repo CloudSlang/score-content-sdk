@@ -13,25 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin;
 
-import java.util.Map;
 
-public class IteratorSessionResource extends SessionResource<Map<String, Object>> {
+public class SessionObject<T> extends SessionParam {
+	private static final long serialVersionUID = 3164809302900911841L;
 
-    private Map<String, Object> iteratorMap;
+	private SessionResource<T> resource;
 
-    public IteratorSessionResource(final Map<String, Object> iteratorMap) {
-        this.iteratorMap = iteratorMap;
-    }
+	public void setResource(SessionResource<T> resource) {
+		this.resource = resource;
+	}
 
-    @Override
-    public Map<String, Object> get() {
-        return iteratorMap;
-    }
+	public SessionResource<T> getResource() {
+		return resource;
+	}
 
-    @Override
-    public void release() {
-        iteratorMap = null;
-    }
+	public T get() {
+		return resource == null ? null : resource.get();
+	}
 }

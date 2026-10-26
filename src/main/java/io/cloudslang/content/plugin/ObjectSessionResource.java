@@ -13,17 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin.ActionMetadata;
+package io.cloudslang.content.plugin;
 
-/**
- * This enum is used in Studio the create operations from the @Action/IActions
- * Do not modify this file unless we modify also OperationResponse Type in studio
- */
-//TODO: Fix Javadoc - reference to OO Studio
-public enum ResponseType {
-    RESOLVED,
-    DIAGNOSED,
-    ERROR,
-    NO_ACTION_TAKEN,
-    RESOLVE_BY_NAME
+import java.io.Serializable;
+
+public class ObjectSessionResource extends SessionResource<Object> implements Serializable {
+
+    private static final long serialVersionUID = -1056068984564693902L;
+
+    private Object object;
+
+    public ObjectSessionResource(final Object object) {
+        this.object = object;
+    }
+
+    @Override
+    public Object get() {
+        return object;
+    }
+
+    @Override
+    public void release() {
+        object = null;
+    }
 }

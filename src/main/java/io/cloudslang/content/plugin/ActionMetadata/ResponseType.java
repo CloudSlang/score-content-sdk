@@ -13,23 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin.ActionMetadata;
 
-
-public class SessionObject<T> extends SessionParam {
-	private static final long serialVersionUID = 3164809302900911841L;
-
-	private SessionResource<T> resource;
-
-	public void setResource(SessionResource<T> resource) {
-		this.resource = resource;
-	}
-
-	public SessionResource<T> getResource() {
-		return resource;
-	}
-
-	public T get() {
-		return resource == null ? null : resource.get();
-	}
+/**
+ * This enum is used in Studio the create operations from the @Action/IActions
+ * Do not modify this file unless we modify also OperationResponse Type in studio
+ */
+//TODO: Fix Javadoc - reference to OO Studio
+public enum ResponseType {
+    RESOLVED,
+    DIAGNOSED,
+    ERROR,
+    NO_ACTION_TAKEN,
+    RESOLVE_BY_NAME
 }

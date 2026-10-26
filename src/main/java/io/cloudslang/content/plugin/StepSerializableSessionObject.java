@@ -13,24 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
+package io.cloudslang.content.plugin;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
+public class StepSerializableSessionObject extends SerializableSessionObject {
+	private static final long serialVersionUID = -8090216630259835589L;
 
-import static java.lang.annotation.ElementType.PARAMETER;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+	//for instantiation by reflection - do not remove
+	public StepSerializableSessionObject() {
+		super();
+	}
 
-/**
- * Date: 6/20/11
- *
- * @author Dima Rassin
- */
-//TODO: Add Javadoc
-@Target(PARAMETER) @Retention(RUNTIME)
-public @interface Param {
-    String value(); // the param name
-    boolean required() default false;
-    boolean encrypted() default false;
-    String description() default "";
+	public StepSerializableSessionObject(String name) {
+		setName(name);
+	}
+
 }
