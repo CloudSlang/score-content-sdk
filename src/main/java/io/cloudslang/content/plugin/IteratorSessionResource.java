@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
+package io.cloudslang.content.plugin;
 
-/**
- * Created by IntelliJ IDEA.
- * User: butensky
- * Date: 28/03/12
- * Time: 09:56
- * The annotation to define the metadata of the @Action output.
- */
-//TODO: Add Javadoc
-public @interface Output {
-    String value();
-    String description() default "";
+import java.util.Map;
+
+public class IteratorSessionResource extends SessionResource<Map<String, Object>> {
+
+    private Map<String, Object> iteratorMap;
+
+    public IteratorSessionResource(final Map<String, Object> iteratorMap) {
+        this.iteratorMap = iteratorMap;
+    }
+
+    @Override
+    public Map<String, Object> get() {
+        return iteratorMap;
+    }
+
+    @Override
+    public void release() {
+        iteratorMap = null;
+    }
 }

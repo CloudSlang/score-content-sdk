@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
+package io.cloudslang.content.plugin;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-
-import static java.lang.annotation.ElementType.PARAMETER;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+import java.io.Serializable;
 
 /**
- * Date: 6/20/11
- *
- * @author Dima Rassin
+ * Created by IntelliJ IDEA.
+ * User: maromben
+ * Date: 3/19/12
+ * Time: 8:14 PM
  */
 //TODO: Add Javadoc
-@Target(PARAMETER) @Retention(RUNTIME)
-public @interface Param {
-    String value(); // the param name
-    boolean required() default false;
-    boolean encrypted() default false;
-    String description() default "";
+public class SerializableSessionObject extends SessionParam{
+    private static final long serialVersionUID = -8017906075213304430L;
+
+    private Serializable value;
+
+    public Serializable getValue() {
+        return value;
+    }
+
+    public void setValue(Serializable value) {
+        this.value = value;
+    }
 }

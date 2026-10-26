@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.annotations;
 
-import java.util.Map;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
-public class IteratorSessionResource extends SessionResource<Map<String, Object>> {
+import static java.lang.annotation.ElementType.PARAMETER;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-    private Map<String, Object> iteratorMap;
-
-    public IteratorSessionResource(final Map<String, Object> iteratorMap) {
-        this.iteratorMap = iteratorMap;
-    }
-
-    @Override
-    public Map<String, Object> get() {
-        return iteratorMap;
-    }
-
-    @Override
-    public void release() {
-        iteratorMap = null;
-    }
+/**
+ * Date: 6/20/11
+ *
+ * @author Dima Rassin
+ */
+//TODO: Add Javadoc
+@Target(PARAMETER) @Retention(RUNTIME)
+public @interface Param {
+    String value(); // the param name
+    boolean required() default false;
+    boolean encrypted() default false;
+    String description() default "";
 }

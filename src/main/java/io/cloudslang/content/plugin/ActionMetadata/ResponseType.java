@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,27 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
-
-import java.io.Serializable;
+package io.cloudslang.content.plugin.ActionMetadata;
 
 /**
- * Created by IntelliJ IDEA.
- * User: maromben
- * Date: 3/19/12
- * Time: 8:14 PM
+ * This enum is used in Studio the create operations from the @Action/IActions
+ * Do not modify this file unless we modify also OperationResponse Type in studio
  */
-//TODO: Add Javadoc
-public class SerializableSessionObject extends SessionParam{
-    private static final long serialVersionUID = -8017906075213304430L;
-
-    private Serializable value;
-
-    public Serializable getValue() {
-        return value;
-    }
-
-    public void setValue(Serializable value) {
-        this.value = value;
-    }
+//TODO: Fix Javadoc - reference to OO Studio
+public enum ResponseType {
+    RESOLVED,
+    DIAGNOSED,
+    ERROR,
+    NO_ACTION_TAKEN,
+    RESOLVE_BY_NAME
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
+package io.cloudslang.content.annotations;
 
-import com.hp.oo.sdk.content.plugin.ActionMetadata.MatchType;
-import com.hp.oo.sdk.content.plugin.ActionMetadata.ResponseType;
+import io.cloudslang.content.plugin.ActionMetadata.MatchType;
+import io.cloudslang.content.plugin.ActionMetadata.ResponseType;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

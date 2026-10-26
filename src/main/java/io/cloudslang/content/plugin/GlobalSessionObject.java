@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,25 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.annotations;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
-
-import static java.lang.annotation.ElementType.METHOD;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+package io.cloudslang.content.plugin;
 
 /**
- * Date: 6/20/11
+ * Date: 2/20/14
  *
- * @author Dima Rassin
+ * @author Meir Wahnon
  */
 //TODO: Add Javadoc
-@Target(METHOD) @Retention(RUNTIME)
-public @interface Action {
-    String value() default "";
-    String name() default "";
-    String description() default "";
-    Output[] outputs() default {};
-    Response[] responses() default {};
+public class GlobalSessionObject<T> extends SessionParam {
+    private static final long serialVersionUID = 3164809302900911841L;
+
+    private SessionResource<T> resource;
+
+    public void setResource(SessionResource<T> resource) {
+        this.resource = resource;
+    }
+
+    public SessionResource<T> getResource() {
+        return resource;
+    }
+
+    public T get() {
+        return resource == null ? null : resource.get();
+    }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,18 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin;
 
-public class StepSerializableSessionObject extends SerializableSessionObject {
-	private static final long serialVersionUID = -8090216630259835589L;
+/**
+ * Date: 7/28/11
+ *
+ * @author Dima Rassin
+ */
+//TODO: Add Javadoc
+public abstract class SessionResource<T> {
+    public abstract T get();
 
-	//for instantiation by reflection - do not remove
-	public StepSerializableSessionObject() {
-		super();
-	}
+    public abstract void release();
 
-	public StepSerializableSessionObject(String name) {
-		setName(name);
-	}
+    @Override
+    protected void finalize() throws Throwable {
+        release();
+        super.finalize();
+    }
+
 
 }

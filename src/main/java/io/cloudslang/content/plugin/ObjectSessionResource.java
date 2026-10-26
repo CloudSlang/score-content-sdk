@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,23 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin;
+package io.cloudslang.content.plugin;
 
+import java.io.Serializable;
 
-public class SessionObject<T> extends SessionParam {
-	private static final long serialVersionUID = 3164809302900911841L;
+public class ObjectSessionResource extends SessionResource<Object> implements Serializable {
 
-	private SessionResource<T> resource;
+    private static final long serialVersionUID = -1056068984564693902L;
 
-	public void setResource(SessionResource<T> resource) {
-		this.resource = resource;
-	}
+    private Object object;
 
-	public SessionResource<T> getResource() {
-		return resource;
-	}
+    public ObjectSessionResource(final Object object) {
+        this.object = object;
+    }
 
-	public T get() {
-		return resource == null ? null : resource.get();
-	}
+    @Override
+    public Object get() {
+        return object;
+    }
+
+    @Override
+    public void release() {
+        object = null;
+    }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright © 2014-2017 EntIT Software LLC, a Micro Focus company (L.P.)
+ * Copyright © 2022-2026 Open Text (L.P.)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hp.oo.sdk.content.plugin.ActionMetadata;
+package io.cloudslang.content.annotations;
 
 /**
- * This enum is used in Studio the create operations from the @Action/IActions
- * Do not modify this file unless we modify also OperationResponse Type in studio
+ * Created by IntelliJ IDEA.
+ * User: butensky
+ * Date: 28/03/12
+ * Time: 09:56
+ * The annotation to define the metadata of the @Action output.
  */
-//TODO: Fix Javadoc - reference to OO Studio
-public enum ResponseType {
-    RESOLVED,
-    DIAGNOSED,
-    ERROR,
-    NO_ACTION_TAKEN,
-    RESOLVE_BY_NAME
+//TODO: Add Javadoc
+public @interface Output {
+    String value();
+    String description() default "";
 }
