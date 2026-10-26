@@ -47,7 +47,6 @@
         <!--Maven versions-->
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
-        <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
         <maven-license-plugin.version>4.5</maven-license-plugin.version>
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
